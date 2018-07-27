@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y xterm
+RUN apt-get update  && apt-get install -y xterm
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
@@ -14,6 +14,8 @@ RUN export uid=1000 gid=1000 && \
 RUN apt-get install -y firefox
 
 RUN apt-get install -y curl libnss3-tools
+ 
+RUN apt-get install -y python python-openssl zenity libgtk2.0-0
 
 RUN curl -o /tmp/warsaw_setup_64.deb 'https://guardiao.itau.com.br/warsaw/warsaw_setup_64.deb'
 
